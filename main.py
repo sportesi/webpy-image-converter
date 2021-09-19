@@ -30,7 +30,7 @@ def converter(image_path):
     with Image.open(image_path) as image:
         image.convert('RGB')
         new_path = ''.join(image_path.split('.')[:-1])
-        new_path = f".{new_path}.webp"
+        new_path = os.path.join(new_path + '.webp')
         image.save(new_path, 'webp')
         return new_path
 
