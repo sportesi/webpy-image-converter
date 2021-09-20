@@ -1,4 +1,8 @@
+altgraph==0.17.2
 autopep8==1.5.7
+macholib==1.15.2
 Pillow==8.3.2
 pycodestyle==2.7.0
+pyinstaller==4.5.1
+pyinstaller-hooks-contrib==2021.3
 toml==0.10.2

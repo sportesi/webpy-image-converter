@@ -3,7 +3,7 @@ import os
 
 
 def main():
-    walk_dir = '../wp-content/uploads'
+    walk_dir = './wp-content/uploads'
 
     for root, subdir, files in os.walk(walk_dir):
         ext = ('jpg', 'jpeg', 'png')
@@ -19,7 +19,7 @@ def converter(image_path):
     with Image.open(image_path) as image:
         image.convert('RGBA')
         new_path = ''.join(image_path.split('.')[:-1])
-        new_path = f"..{new_path}.webp"
+        new_path = f".{new_path}.webp"
         image.save(new_path, 'webp')
 
 

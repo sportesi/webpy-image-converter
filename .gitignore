@@ -4,3 +4,6 @@
 .local
 uploads
 *.zip
+build
+*.spec
+__pycache__
