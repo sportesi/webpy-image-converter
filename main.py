@@ -20,6 +20,7 @@ def converter(image_path):
         image.convert('RGBA')
         new_path = ''.join(image_path.split('.')[:-1])
         new_path = f".{new_path}.webp"
+        print(new_path)
         image.save(new_path, 'webp')
 
 

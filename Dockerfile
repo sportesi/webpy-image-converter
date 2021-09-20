@@ -2,11 +2,10 @@ FROM python:3.7-alpine
 
 RUN apk update && apk add \
     musl-dev \
-    linux-headers \
+    libpng-dev \
     jpeg-dev \
     gcc \
-    python3-dev \
-    libjpeg-turbo-dev \
-    zlib-dev
+    zlib-dev \
+    libwebp-dev
 
 RUN pip install virtualenv
