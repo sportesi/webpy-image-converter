@@ -15,9 +15,9 @@ def main():
 
         for image in images:
             image_path = os.path.join(root, image)
-            print(f"Converting {image_path} to WebP")
+            # print(f"Converting {image_path} to WebP")
             webp_path = converter(image_path=image_path)
-            print(f"Image converted: {webp_path}")
+            # print(f"Image converted: {webp_path}")
             zip.write(webp_path)
             os.remove(webp_path)
 
@@ -28,7 +28,7 @@ def main():
 
 def converter(image_path):
     with Image.open(image_path) as image:
-        image.convert('RGB')
+        image.convert('RGBA')
         new_path = ''.join(image_path.split('.')[:-1])
         new_path = os.path.join(new_path + '.webp')
         image.save(new_path, 'webp')
